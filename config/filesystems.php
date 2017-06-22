@@ -42,10 +42,26 @@ return [
     */
 
     'disks' => [
+        'imgEventos' => [
+            'driver' => 'local',
+            'root' => public_path().'/img/eventos',
+            //'root' => storage_path('app'),
+        ],
+        'imgPlato' => [
+            'driver' => 'local',
+            'root' => public_path().'/img/plato',
+            //'root' => storage_path('app'),
+        ],
+        'imgMenu' => [
+            'driver' => 'local',
+            'root' => public_path().'/img/menu',
+            //'root' => storage_path('app'),
+        ],
 
         'local' => [
             'driver' => 'local',
-            'root' => storage_path('app'),
+            'root' => public_path().'/storage',
+            //'root' => storage_path('app'),
         ],
 
         'public' => [

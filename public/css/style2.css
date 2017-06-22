@@ -1,0 +1,416 @@
+.navbar-default{
+    position:fixed;
+    margin-bottom:0;
+    height: 100px;
+    width:110%;
+    z-index: 2;
+    background-color: #980748;
+    border-color: #e7e7e7;
+}
+
+ul.nav.navbar-nav li a{
+    color: #bbaabb;
+    margin-top:30px;
+
+}
+
+
+
+
+#content{
+    min-height:1000px;
+}
+#navbar-carta{
+    width:100%;
+    height:auto;
+    min-height:150px;
+    background-image:url("../img/fondo-carta-navbar.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    margin-top:-40px;
+}
+#navbar-carta>div{
+    width: 80%;
+    background-image: url(../img/logo-3d-2.png);
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-attachment: fixed;
+    background-position: center;
+    margin-top: 50px;
+    margin-left: 10%;
+    height: auto;
+}
+.menu-carta{
+    font-size:0px;
+    font-family:arial;
+    margin-right: -15px;
+    text-align: center;
+    height: 150px;
+     padding: 50px;
+
+    cursor: pointer;
+
+}
+.one {
+    clear: both;
+    position: relative;
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+    background-color: rgba(152,7,72,1);
+}
+.carta-seccion {
+    margin-top: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+.standard_wrapper {
+    max-width: 1425px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 0 90px;
+}
+.page_content_wrapper {
+    margin-top: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+.inner{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+.ppb_menu_title {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #222;
+    display: inline-block;
+    line-height: 1.2em;
+    letter-spacing: 2px;
+}
+.one_half {
+    float: left;
+    width: 48%;
+    margin-right: 3.5%;
+    box-sizing: border-box;
+    position:relative;
+    z-index:-1;
+}
+.menu_content_classic {
+    width: 100%;
+    float: left;
+    margin: 25px 0 0 0;
+    text-align: left;
+}
+h5.menu_post {
+    font-weight: 600;
+    font-size: 1em;
+    text-transform: uppercase;
+    position: relative;
+}
+.post_detail.menu_excerpt {
+    width: calc(75% - 75px);
+}
+.menu_title {
+    position: relative;
+    z-index: 2;
+    font-size: 0.8em;
+    top: -5px;
+    left:-5px;
+}
+.menu_content_classic .menu_dots {
+    position: absolute;
+    left: -5px;
+    right: 0;
+    z-index: 1;
+    margin: 0;
+    border: 0;
+    height: 3px;
+    display: block;
+    background-image: radial-gradient(circle closest-side,#ccc 80%,#fff 10%);
+    background-position: bottom;
+    background-size: 4px 2px;
+    background-repeat: repeat-x;
+}
+.menu_content_classic .menu_price {
+    position: absolute;
+    top: -5px;
+    right: -30px;
+    font-size: 1.1em;
+    color: rgb(117,100,117);
+    z-index: 2;
+}
+.post_detail.menu_excerpt {
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 13px;
+    width: auto;
+    float: left;
+    margin-top: 0;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+.menu_content_classic .menu_highlight, .portfolio_slider_desc .menu_highlight {
+    margin-top: -35px;
+    height: 14px;
+    text-align: center;
+    padding-bottom:20px;
+    padding-left: 10px;
+    padding-right:10px;
+    background: #aaa;
+    color: #fff;
+    float: right;
+    font-size: 0.7em;
+    position: relative;
+    font-weight: 600;
+    margin-left: 5px;
+    border-radius:5px;
+    cursor:pointer;
+}
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.menu_order {
+    height: 14px;
+    line-height: 14px;
+    text-align: center;
+    padding: 3px 7px 3px 7px;
+    background: #cfa670;
+    color: #fff;
+    float: right;
+    font-size: 10px;
+    position: relative;
+    top: 2px;
+    font-weight: 600;
+    border-radius: 5px;
+    right: 2px;
+    text-transform: uppercase;
+}
+.one_half.last {
+    float: right;
+    width: 48%;
+    margin-right: 0;
+    clear: right;
+}
+footer{
+    margin-top:-100px;
+}
+.popover{
+    background-color: #980748;;
+}
+
+.popover h3{
+    background-color: #980748;;
+}
+#eventos-seccion{
+opacity:0;
+
+}
+#eventos-seccion .well{
+    background-color: inherit;
+}
+#eventos-seccion em{
+
+    margin:auto;
+    margin-top:150px;
+    display:block;
+}
+
+/* Menú lateral reservas */
+#dhp-wrapper{
+    position:relative;
+    top:125px;
+}
+
+ul#blmenudeslizante {
+    position: fixed;
+    margin: 0px;
+    padding: 0px;
+    top: 100px;
+    left: -2px;
+    list-style: none;
+    z-index:9999;
+}
+ul#blmenudeslizante li a {
+    background-color: rgba(152,7,72,.5);
+    background-repeat:no-repeat;
+    background-position:center center;
+    border:1px solid #afafaf;
+    -moz-border-radius:0px 10px 10px 0px;
+    -webkit-border-bottom-right-radius: 12px;
+    -webkit-border-top-right-radius: 12px;
+    -khtml-border-bottom-right-radius: 10px;
+    -khtml-border-top-right-radius: 10px;
+    opacity: 0.9
+    text-align: right;
+    height:40px;
+    padding-right: 4px;
+    margin-right:-5px;
+    width:100px;
+    display:block;
+    font-size: 0.8em;
+    color: #ffffff;
+    border-radius:0;
+    margin-left:-90px;
+}
+ul#blmenudeslizante li {
+    width: 90px;
+    line-height:1.5em;
+    margin:0;
+    text-indent: 18px;
+
+}
+ul#blmenudeslizante li a:hover {
+    text-decoration: none;
+    color: #815683;
+    font-weight:bold;
+    font-style:italic;
+}
+.active2{
+    margin-left:0px;
+    text-decoration: none;
+    color: #e7e7e7;
+    font-weight:bold;
+    font-style:italic;
+    border-color: #e7e7e7;
+}
+.active2:hover{
+    margin-left:0px;
+    text-decoration: none;
+    color: #e7e7e7;
+    font-weight:bold;
+    font-style:italic;
+    border-color: #e7e7e7;
+}
+
+/*reservas*/
+#main-reservas{
+    padding-top:70px;
+}
+
+#main-reservas h2{
+    margin-top:10%;
+    margin-bottom:5%;
+}
+.n_personas {
+    zoom: 1;
+    padding: 4px 8px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+}
+.n_personas_list,.hora_list{
+    margin: 0 -2px 4px;
+    padding: 0;
+    list-style: none;
+}
+li.npl{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    margin: 0;
+    padding: 2px 4px;
+    width:12.5%;
+}
+button.bot_n_personas {
+    height: 32px;
+    background: #000;
+    border: 0;
+    padding: 0;
+    line-height: 14px;
+    font-weight: 600;
+    box-shadow: 0 1px 0 0 #fff;
+    transition: box-shadow .3s;
+    width: 100%;
+    font-size: .9rem;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    cursor:pointer;
+}
+button.bot_n_personas:hover{
+    opacity:0.5;
+}
+#more-pax-list {
+    margin-top: 3.5em;
+    font-size: .9em;
+}
+.well{
+    background: transparent;
+    padding:20px;
+}
+#more-pax-list select{
+    background:black;
+    width:60px;
+    border-radius:5px;
+}
+#calendario td:hover{
+    background:#000000;
+    box-shadow: 0 1px 0 0 #fff;
+}
+#calendario td.disabled:hover{
+    background: transparent;
+    box-shadow:none;
+}
+#calendario td.disabled{
+    opacity:0.5;
+}
+#calendario td.active{
+    background:#000000;
+    box-shadow: 0 1px 0 0 #fff;
+    opacity:0.5;
+}
+.hora-subHead{
+    margin: 0 0 4px;
+    font-weight: 600;
+    font-size: 1em;
+}
+.hora_li{
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    margin: 0;
+    padding: 2px 4px;
+    width: 25%;
+}
+.ng-scope{
+    clear: both;
+    margin-bottom: 130px;
+}
+
+#f_reserva{
+    text-align:center;
+}
+#f_reserva input {
+    width: 150px;
+    background: #000000;
+    border: 0;
+    box-shadow: 0 1px 0 0 #fff;
+    color: rgb(187, 170, 187);
+    border-radius:5px;
+    height:1.3em;
+    font-size:.7em;
+    text-align:center;
+    padding:15px;
+}
+button.sbmt{
+    background-color:#980748;
+    display:none
+}

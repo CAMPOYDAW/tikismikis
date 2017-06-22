@@ -1,0 +1,64 @@
+#popupMenu{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    background-color:rgba(50,50,50,1);
+    z-index:200000;
+    display:none;
+    max-width:2000px;
+    left:4px;
+}
+#popupMenu>div{
+    position:absolute;
+    width:80%;
+    height:80%;
+    left:10%;
+    top:10%;
+    font-family: 'Yellowtail';
+    background-color:white;
+    -webkit-background-size:cover;
+    background-size:cover;
+    min-height:450px;
+    -webkit-box-shadow: -2px 3px 22px -2px rgba(61,54,61,1);
+    -moz-box-shadow: -2px 3px 22px -2px rgba(61,54,61,1);
+    box-shadow: -2px 3px 22px -2px rgba(61,54,61,1);
+}
+#popupMenu .centro{
+    text-align:center;
+    font-size:2.2rem;
+}
+#popupMenu .menu-separador{
+    font-weight: bold;
+    font-size:2.4rem;
+}
+#popupMenu .menu-titulo{
+    font-size:3.5rem;
+    margin-bottom:30px;
+}
+#popupMenu>div div.row{
+    padding-top:12px;
+}
+#popupMenu>div>p{
+    margin-top:5px;
+    margin-right:5px;
+    text-align:right;
+}
+#popupMenu>div>p{
+    cursor:pointer;
+}
+#popupMenu .centro{
+    color:#333;
+    margin-top:10px;
+    margin-bottom:10px;
+    height:97%;
+    background-color:rgba(249,244,244,0.8);
+    top:-35px;
+    overflow:auto;
+
+}
+#popupMenu .menu-precio{
+    margin-top:50px;
+    padding-right:30px;
+    text-align: right;
+}
