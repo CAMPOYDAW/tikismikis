@@ -91,17 +91,7 @@ td,th{
 .table-responsive{
     height:300px;
 }
-#wait{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    display:none;
-}
-#wait img{
 
-    width: 100px;
-    height:100px;
-}
 #tabla [type=checkbox],#tabla2 [type=checkbox]{
     position:relative;
     left:-5000px;
@@ -220,4 +210,18 @@ th{
 }
 #edit-user{
     display:none;
+}
+#admin-reservas .col-lg-4{
+    height:550px;
+    overflow:auto;
+}
+#admin-reservas .col-lg-4 td{
+    text-align:left;
+}
+#admin-reservas td.boton-res{
+    text-align:center;
+    width:40%;
+}
+#admin-reservas td.boton-res button{
+    width:60%;
 }

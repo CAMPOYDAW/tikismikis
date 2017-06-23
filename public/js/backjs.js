@@ -239,7 +239,25 @@ function cleanInputFile() {
         document.getElementById("img_destino").setAttribute("src", "../img/fondo-eventos.jpg");
     }else document.getElementById("img_destino").setAttribute("src", "../img/carta-restaurante.png");
 }
+function confirmacion(resp){
+    return confirm("Se va a "+ resp + " una reserva. ¿Confirma la operación");
+}
 
+function mandarEmail(el,id){
+    if(!confirm("Se va a mandar un e mail del evento a cada uno de tus clientes. La operación puede tardar unos minutos. ¿Confirmar?")) return
+    $("#wait").show();
+    $.post('eventos/mail',{id:id},function(result) {
+        $("#wait").hide();
+        $("#f_ok").show(100);
+        $("#f_ok span").html(tabla+" activado").show(100);
+        $("#f_ok span").delay(3000).hide(100);
+        $(el).parent().children('span.glyphicon').prop('class', 'glyphicon glyphicon-ok-circle');
+        $(el).parent().children('span.glyphicon').html('on');
+
+    }).fail(function(data){
+        alert(data);
+    });
+}
 
 function plato(item){
     if (item=="") return;
@@ -275,6 +293,8 @@ function validar(){
     $('#f_error span').show();
     return false
 }
+
+
 
 function NumCheck(e, field) {
     key = e.keyCode ? e.keyCode : e.which

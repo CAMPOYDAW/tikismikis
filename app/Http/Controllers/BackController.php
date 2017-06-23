@@ -6,6 +6,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\Validator;
+use App\Reserve;
+use Illuminate\Support\Facades\DB;
 class BackController extends Controller{
 
     protected $mensaje;
@@ -17,6 +19,13 @@ class BackController extends Controller{
 
 
     public function getIndex(){
+        $n_reservas=Reserve::where("estado","=","-1")->count();
+        $n_reservas_hoy=Reserve::where("estado","=","1")->where("fecha","=", DB::raw('curdate()'))->count();
+
+        session()->put('res_sin',$n_reservas);
+        session()->put('res_hoy',$n_reservas_hoy);
+        session()->put('total_res',$n_reservas+$n_reservas_hoy);
+
         return view('back.index');
     }
     public function postUpdateUser(Request $request){
