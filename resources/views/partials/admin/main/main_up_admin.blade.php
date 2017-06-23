@@ -12,7 +12,7 @@ $message=Session::get('message');
 
 <div class="row placeholders">
 
-    <div class="col-xs-6 col-sm-3 placeholder" id="datos-user">
+    <div class="col-xs-4 col-sm-3 placeholder" id="datos-user">
         <h3>Tus datos</h3>
         <div class="row">
             <span class="text-muted">Nombre: {{ Auth::user()->name }}</span>
@@ -60,22 +60,45 @@ $message=Session::get('message');
         </div>
         </form>
     </div>
+        <h3>News</h3>
 
 
 
+    <div class="col-xs-8 col-sm-9 placeholder">
+        <div class="col-sm-6">
+            <h4 style="margin-bottom: 30px">Reservas</h4>
+            @if(session()->get('res_sin'))
+            <div class="alert alert-warning">
+                <a href="{{ url('admin/reservas') }}">Reservas Sin Responder <span class="badge">{{ session()->get('res_sin') }}</span></a>
+            </div>
+            @else
+            <div class="alert alert-info">
+                <span class="text-muted">No tienes reservas sin responder</span>
+            </div>
+            @endif
 
-    <div class="col-xs-6 col-sm-3 placeholder">
+            @if(session()->get('res_hoy'))
+            <div class="alert alert-warning">
+                <a href="{{ url('admin/reservas') }}">Reservas Online hoy <span class="badge">{{ session()->get('res_hoy') }}</span></a>
+            </div>
+            @else
+                <div class="alert alert-info">
+                    <span class="text-muted">Sin reservas online hoy</span>
+                </div>
+            @endif
+            <div class="well">
 
+                <a href="{{ url('admin/reservas') }}">Ir a reservas</a>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <h4 style="margin-bottom: 30px">Consultas de contacto</h4>
+            <div class="well">
+
+                <a href="{{ url('admin/contacto') }}">Ir a reservas</a>
+            </div>
+        </div>
 
     </div>
-    <div class="col-xs-6 col-sm-3 placeholder">
-        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-        <h4>Label</h4>
-        <span class="text-muted">Something else</span>
-    </div>
-    <div class="col-xs-6 col-sm-3 placeholder">
-        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-        <h4>Label</h4>
-        <span class="text-muted">Something else</span>
-    </div>
+
 </div>

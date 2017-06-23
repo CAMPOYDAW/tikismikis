@@ -13,8 +13,11 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
     <!-- front css -->
     <link href="{{	url('/css/style.css').'?'.random_int(1000,9999)	}}" rel="stylesheet">
+
+
 
     @if(!(Request::is('menus') or Request::is('login-public') or Request::is('situacion') or Request::is('/')))
         <link href="{{	url('/css/style2.css').'?'.random_int(1000,9999)	}}" rel="stylesheet">
@@ -28,6 +31,9 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 
     <![endif]-->
+    <script>
+         var mensaje='{{ session()->get('mensaje') }}';
+    </script>
     @if(isset($page))
         <script>var page='{{$page}}'</script>
         @else
@@ -48,6 +54,9 @@
 @include ('partials.footer')
     </footer>
 @yield('popup')
+<div id="wait">
+    <img src="{{url('img/wait.gif')}}" >
+</div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -59,6 +68,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
 <link rel="stylesheet" src="{{url('/assets/bootstrap/css/select2.min.css')}}">
 <script src="{{url('/assets/bootstrap/js/select2.min.js')}}"></script>
+<script src="{{url('/assets/bootstrap/js/bootpopup.js')}}"></script>
+
 @if(Request::is('carta'))
     <link rel="stylesheet" href="{{url('/assets/bootstrap/css/slider.css')}}" type="text/css">
     <script src="{{url('/assets/bootstrap/js/slider.js')}}"></script>
@@ -67,7 +78,7 @@
     <script src="{{	url('/js/frontjs.js').'?'.random_int(1000,9999)	}}"></script>
     <script src="{{	url('/js/comunjs.js').'?'.random_int(1000,9999)	}}"></script>
 @else
-    <script src="{{	url('/js/frontjs2.js').'?'.random_int(1000,9999)	}}"></script>
+    <script src="{{	url('/js/frontjs2.js')	}}"></script>
 @endif
 </body>
 </html>

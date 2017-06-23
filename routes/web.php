@@ -16,13 +16,14 @@ Route::get('/back/index','BackController@getIndex');
 
 Route::get('/contacto','PrivateController@getContacto');
 Route::get('/datos','PrivateController@getDatos');
+Route::post('/datos','PrivateController@postDatos');
 Route::get('/carta','FrontController@getCarta');
 Route::get('/eventos','FrontController@getEventos');
 
 
-
 Route::get('/reserva','PrivateController@getReserva');
 Route::put('reserva','PrivateController@putReserva');
+Route::get('datos','PrivateController@getDatos');
 
 Route::get('/admin','BackController@getIndex');
 Route::post('/admin/updateUser','BackController@postUpdateUser');
@@ -63,6 +64,7 @@ Route::get("admin/eventos/editar/{id}","BackEventosController@getEditar");
 Route::post('admin/eventos/update','BackEventosController@postUpdate');
 Route::post('admin/eventos/desactivar','BackEventosController@postDesactivar');//AJAX
 Route::post('admin/eventos/borrar','BackEventosController@postBorrar');//AJAX
+Route::post('admin/eventos/mail','BackEventosController@postMail');
 
 Route::get('admin/usuarios','BackUsuariosController@getUsuarios');
 Route::post('admin/usuarios','BackUsuariosController@postUsuarios');
@@ -70,5 +72,11 @@ Route::get('admin/usuarios/editar/{id}','BackUsuariosController@getEditar');
 Route::post('admin/usuarios/update','BackUsuariosController@postUpdate');
 Route::post('admin/usuarios/desactivar','BackUsuariosController@postDesactivar');//AJAX
 Route::post('admin/usuarios/borrar','BackUsuariosController@postBorrar');//AJAX
+
+Route::get('admin/reservas','BackReservasController@getReservas');
+Route::post('admin/reservas','BackReservasController@postReservas');
+Route::post('admin/reservas/anular','BackReservasController@postAnular');
+
+
 
 

@@ -14,5 +14,8 @@
     @elseif(Request::is('admin/usuarios'))
         @include('partials.admin.main.main_up_usuarios')
         @include('partials.admin.main.main_down_usuarios')
+    @elseif(Request::is('admin/reservas'))
+        @include('partials.admin.main.main_up_reserva')
+        @include('partials.admin.main.main_down_reserva')
     @endif
 </div>

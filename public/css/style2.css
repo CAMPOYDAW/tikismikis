@@ -414,3 +414,26 @@ button.sbmt{
     background-color:#980748;
     display:none
 }
+.reserv ul{
+    text-align:center;
+}
+#datos_user{
+    position:relative;
+    top:300px;
+    height:700px;
+}
+#datos_user #datos-user,#datos_user #edit-user{
+    text-align:center;
+}
+#datos_user #edit-user input{
+    width:50%;
+    margin:auto;
+    background-color: transparent;
+    margin-top:10px;
+    margin-bottom:10px;
+    text-align:center;
+    color:inherit;
+}
+#datos_user .well{
+    border:0
+}

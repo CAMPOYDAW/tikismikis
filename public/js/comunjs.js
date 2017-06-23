@@ -90,3 +90,5 @@ function hasImg(id){
     }
     return hasimg
 }
+
+

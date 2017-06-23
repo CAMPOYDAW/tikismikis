@@ -1,3 +1,4 @@
+
 <div id="main-reservas">
     <div class="container">
         <div class="col-lg-6">
@@ -205,7 +206,94 @@
 
 
         <div class="col-lg-6">
+            <h2>Tus reservas</h2>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Tus reservas de hoy</p>
+                </div>
+                <div class="col-lg-12">
+                    <div class="reserv well">
+                        @if(count( session()->get('reservas_hoy'))>0)
 
+                            @foreach(session()->get('reservas_hoy') as $rs)
+                                    <ul class="list-inline">
+                                        <li>{{ $rs->fecha }}</li>
+                                        <li>{{ $rs->hora }}</li>
+                                        <li>clientes: {{ $rs->comensales }}</li>
+                                    </ul>
+
+                            @endforeach
+
+                        @else
+                            <span><ul><li>No tiene reservas hoy</li></ul></span>
+                        @endif
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <p>Tus reservas por confirmar</p>
+                </div>
+                <div class="col-lg-12">
+                    <div class="reserv well">
+                        @if(count( session()->get('reservas_sin'))>0)
+
+                            @foreach(session()->get('reservas_sin') as $rs)
+                                <ul class="list-inline">
+                                    <li>{{ $rs->fecha }}</li>
+                                    <li>{{ $rs->hora }}</li>
+                                    <li>clientes: {{ $rs->comensales }}</li>
+                                </ul>
+
+                            @endforeach
+
+                        @else
+                            <span><ul><li>No tiene reservas sin confirmar</li></ul></span>
+                        @endif
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <p>Tus reservas futuras</p>
+                </div>
+                <div class="col-lg-12">
+                    <div class="reserv well">
+                        @if(count( session()->get('reservas_fut'))>0)
+
+                            @foreach(session()->get('reservas_fut') as $rs)
+                                <ul class="list-inline">
+                                    <li>{{ $rs->fecha }}</li>
+                                    <li>{{ $rs->hora }}</li>
+                                    <li>clientes: {{ $rs->comensales }}</li>
+                                </ul>
+
+                            @endforeach
+
+                        @else
+                            <span><ul><li>No tiene reservas futuras</li></ul></span>
+                        @endif
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <p>Tus reservas denegadas</p>
+                </div>
+                <div class="col-lg-12">
+                    <div class="reserv well">
+                        @if(count( session()->get('reservas_no'))>0)
+
+                            @foreach(session()->get('reservas_no') as $rs)
+                                <ul class="list-inline">
+                                    <li>{{ $rs->fecha }}</li>
+                                    <li>{{ $rs->hora }}</li>
+                                    <li>clientes: {{ $rs->comensales }}</li>
+                                </ul>
+
+                            @endforeach
+
+                        @else
+                            <span><ul><li>No tiene reservas denegadas</li></ul></span>
+                        @endif
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+

@@ -62,3 +62,14 @@
     padding-right:30px;
     text-align: right;
 }
+#wait{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display:none;
+}
+#wait img{
+
+    width: 100px;
+    height:100px;
+}

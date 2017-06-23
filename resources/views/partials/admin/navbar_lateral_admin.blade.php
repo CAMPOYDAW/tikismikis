@@ -16,7 +16,7 @@
         </ul>
     @endif
     <ul class="nav nav-sidebar">
-        <li class="{{Request::is('admin/reservas')?'active':''}}"><a href="">Reservas</a></li>
+        <li class="{{Request::is('admin/reservas')?'active':''}}"><a href="{{url('admin/reservas')}}">Reservas</a></li>
         <li class="{{Request::is('admin/contactos')?'active':''}}"><a href="">Contacto</a></li>
     </ul>
 </div>

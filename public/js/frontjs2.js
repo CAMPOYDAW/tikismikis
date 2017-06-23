@@ -1,4 +1,15 @@
 $(document).ready(function() {
+    if(mensaje!="" && mensaje){
+
+        bootpopup.alert(mensaje);
+        var pathnames = window.location.pathname.split("/");
+        var path="";
+        for(var i=1;i<pathnames.length-1;i++){
+            path+=pathnames[i]+"/";
+        }
+        //alert(path);
+        //window.history.replaceState("data", "reserva",path);
+    }
     $('ul.nav.navbar-nav li').stop().animate({padding: "0"}, 700);
     $('ul.nav.navbar-nav').stop().animate({marginLeft: "0"}, 1000);
     $('.navbar-default img').stop().animate({marginTop: "0"}, 500);
@@ -75,6 +86,7 @@ $(document).ready(function() {
 });
 
 function sbmt(){
+    $("#wait").show();
     this.submit;
     //return false;
 }
@@ -92,7 +104,15 @@ function sumarDias(fecha, dias){
     fecha.setDate(fecha.getDate() + dias);
     return fecha;
 }
-
+function edit_user(){
+    if(document.getElementById("edit-user").style.display=="none"){
+        $("#datos-user").hide();
+        $("#edit-user").show();
+    }else{
+        $("#datos-user").show();
+        $("#edit-user").hide();
+    }
+}
 function hasImg(id){
     hasimg=false;
     for(var i=0;i<imgs.length;i++){
