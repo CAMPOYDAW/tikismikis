@@ -1,7 +1,7 @@
 <div id="eventos-seccion">
     <div class="container">
         <h2>
-            <em><img src='../public/img/logo-rec-white.png' width='50%'></em>
+            <em><img src='{{url('img/logo-rec-white.png')}}' width='50%'></em>
             Nuestros próximos eventos
         </h2>
     </div>

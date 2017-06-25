@@ -1,6 +1,6 @@
 <div id="popupMenu">
     <div class="container-fluid">
-        <p><span class="glyphicon glyphicon-remove"></span></p>
+        <p><span class="glyphicon glyphicon-remove" style="font-size: 1.5em;color:black"></span></p>
         <div class="col-sm-3"></div>
 
             <div class="col-sm-6 centro">

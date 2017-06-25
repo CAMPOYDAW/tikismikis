@@ -59,7 +59,7 @@ $message=Session::get('message');
                                                 <input type="email" name="email" id="email" class="form-control" placeholder="E-mail (max 255 caracteres)" value="{{ $edit?$edit->email:'' }}" maxlength="255" required/>
                                             </div>
                                         </div>
-                                        <input type="hidden" name="type" id="type" value="employ">
+                                        <input type="hidden" name="type" id="type" value="{{ $edit->type or 'employ' }}">
                                         @if($edit)
                                             <button type="submit" class="btn btn-default btn-primary">Modificar</button><a href="usuarios" class="btn btn-default" style="margin-left:50px">Agregar Usuario</a>
                                             <input type="hidden" name="id" value="{{ $edit->id }}">

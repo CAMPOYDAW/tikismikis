@@ -28,7 +28,7 @@ class RedirectIfAuthenticated
                if($us['type']=='user'){
                    return redirect('/login-public');
                }
-               return redirect('/home');
+               return redirect('/login');
            }
         }
 

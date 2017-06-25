@@ -211,7 +211,7 @@ th{
 #edit-user{
     display:none;
 }
-#admin-reservas .col-lg-4{
+#admin-reservas .col-lg-4,#admin-reservas .col-lg-5,#admin-reservas .col-lg-3{
     height:550px;
     overflow:auto;
 }

@@ -6,6 +6,7 @@ $(document).ready(function () {
         $('#popupMenu').fadeOut(1000);
 
     });
+
     $(".centro").niceScroll({
         cursorcolor:"#f8f8f8",
         zindex:"10",
@@ -75,7 +76,7 @@ function mostrar(e){
         } else div.css({backgroundImage: "url('../img/fondo-menu.png')"});
     }
 
-    $(".centro").stop().animate({scrollTop: $(".centro").height()*4},50000);
+
 
 
 }

@@ -13,7 +13,10 @@
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~5.7",
-        "doctrine/dbal": "~2.3"
+        "doctrine/dbal": "~2.3",
+        "weblee/mandrill": "dev-master",
+        "mandrill/mandrill": "1.0.*",
+        "guzzlehttp/guzzle": "^6.2"
     },
     "autoload": {
         "classmap": [
