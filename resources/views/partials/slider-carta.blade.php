@@ -1,6 +1,5 @@
 
 
-
 <!--
        If you want to change #bootstrap-touch-slider id then you have to change Carousel-indicators and Carousel-Control  #bootstrap-touch-slider slide as well
        Slide effect: slide, fade
@@ -37,7 +36,7 @@
                         <!-- <h1 data-animation="animated flipInX">Bootstrap touch slider</h1>-->
                         <p data-animation="animated zoomInRight"><img src='{{ url('img/logo-dib-white.png') }}' width='10%'></p>
                         <h1 data-animation="animated lightSpeedIn">Disfruta de nuestra amplia carta de platos en un ambiente inigualable</h1><br>
-                        <a href="{{url('/login-public')}}" class="btn btn-lg btn-default">Haz tu reserva Online</a>
+                        <a href="{{ url(Auth::user()?'/reserva':'/login-public')}}" class="btn btn-lg btn-default">Haz tu reserva Online</a>
 
                     </div>
                 </div>
@@ -58,7 +57,7 @@
                     <div class="slide-text slide_style_left">
                         <p data-animation="animated zoomInRight"><img src='{{ url('img/logo-dib-white.png') }}' width='10%'></p>
                         <h1 data-animation="animated fadeInLeft">{{ $pl->nombre }}</h1><br>
-                        <a href="{{url('/login-public')}}" class="btn btn-lg btn-default">Haz tu reserva Online</a>
+                        <a href="{{ url(Auth::user()?'/reserva':'/login-public')}}" class="btn btn-lg btn-default">Haz tu reserva Online</a>
 
                     </div>
                 </div>
@@ -77,7 +76,7 @@
                <!-- <h1 data-animation="animated flipInX">Bootstrap touch slider</h1>-->
                 <p data-animation="animated zoomInRight"><img src='{{ url('img/logo-dib-white.png') }}' width='10%'></p>
                 <h1 data-animation="animated lightSpeedIn">{{ $pl->nombre }}</h1><br>
-                <a href="{{url('/login-public')}}" class="btn btn-lg btn-default">Haz tu reserva Online</a>
+                <a href="{{ url(Auth::user()?'/reserva':'/login-public')}}" class="btn btn-lg btn-default">Haz tu reserva Online</a>
 
             </div>
         </div>
@@ -93,7 +92,7 @@
                <!-- <h1 data-animation="animated zoomInLeft">Beautiful Animations</h1> -->
                 <p data-animation="animated zoomInLeft"><img src='{{ url('img/logo-dib-white.png') }}' width='10%'></p>
                 <h1 data-animation="animated fadeInRight">{{ $pl->nombre }}</h1><br>
-                <a href="{{url('/login-public')}}" class="btn btn-lg btn-default">Haz tu reserva Online</a>
+                <a href="{{ url(Auth::user()?'/reserva':'/login-public')}}" class="btn btn-lg btn-default">Haz tu reserva Online</a>
             </div>
         </div>
        @endif

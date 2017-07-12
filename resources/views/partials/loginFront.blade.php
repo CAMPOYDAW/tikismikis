@@ -1,6 +1,14 @@
+<?php
+$oferta="";
+foreach ($sets as $s){
+    if($s->key=='C_OFERTA_ONLINE') $oferta=$s->value;
+
+}
+
+?>
 <div id="ancla-login-public"></div>
 <div id="login">
-    @if(Auth::user()==null || Auth::user()->type!='user')
+    @if(Auth::user()==null)
     <div id="login-header">
         <h2>Loguéate si quieres reservar o contactar con nosotros</h2>
 
@@ -19,4 +27,7 @@
 
         </div>
     @endif
+    <div id="login-oferta" {!!  Auth::user()?"style='bottom:-100px'":"" !!}>
+        <span class="label-success">!!!ATENCION</span> Si haces tu reserva on-line: {{ $oferta }}
+    </div>
 </div>

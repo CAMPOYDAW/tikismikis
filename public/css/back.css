@@ -215,6 +215,10 @@ th{
     height:550px;
     overflow:auto;
 }
+#admin-contacto .col-lg-4{
+    height:300px;
+    overflow:auto;
+}
 #admin-reservas .col-lg-4 td{
     text-align:left;
 }
@@ -224,4 +228,20 @@ th{
 }
 #admin-reservas td.boton-res button{
     width:60%;
+}
+.pregunta{
+    cursor:pointer;
+}
+
+.jumbotron{
+    border:3px solid black;
+    background-color: lightcyan;
+}
+.pop-consulta{
+    position:absolute;
+    width:40%;
+    background-color: white;
+    display:none;
+    right:30%;
+    top:100px;
 }

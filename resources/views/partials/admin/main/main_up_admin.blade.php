@@ -93,9 +93,18 @@ $message=Session::get('message');
         </div>
         <div class="col-sm-6">
             <h4 style="margin-bottom: 30px">Consultas de contacto</h4>
+            @if(session()->get('con_sin'))
+                <div class="alert alert-warning">
+                    <a href="{{ url('admin/contacto') }}">Consultas Sin Responder <span class="badge">{{ session()->get('con_sin') }}</span></a>
+                </div>
+            @else
+                <div class="alert alert-info">
+                    <span class="text-muted">No tienes consultas sin responder</span>
+                </div>
+            @endif
             <div class="well">
 
-                <a href="{{ url('admin/contacto') }}">Ir a reservas</a>
+                <a href="{{ url('admin/contacto') }}">Ir a contactos</a>
             </div>
         </div>
 

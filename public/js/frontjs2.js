@@ -2,6 +2,7 @@ $(document).ready(function() {
     if(mensaje!="" && mensaje){
 
         bootpopup.alert(mensaje);
+		mensaje="";
         var pathnames = window.location.pathname.split("/");
         var path="";
         for(var i=1;i<pathnames.length-1;i++){
@@ -19,12 +20,12 @@ $(document).ready(function() {
     $('').delay(1500).css("opacity","1");
     $('.menu-carta').hover(
         function () {
-            $(this).stop().animate({fontSize: '24px'}, 300);
+            $(this).stop().animate({fontSize: '1.2em'}, 300);
             $(this).css({border: '3px solid #980748'});
             $(this).css({backgroundColor: 'rgba(0,0,0,.5)'});
             $(this).css("transition", "all .5s");
         }, function () {
-            $(this).stop().animate({fontSize: '0px'}, 50);
+            $(this).stop().animate({fontSize: '0.5em'}, 50);
             $(this).css({border: 'none'});
             $(this).css({backgroundColor: 'transparent'});
         });

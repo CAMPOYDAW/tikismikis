@@ -152,5 +152,5 @@ $message=Session::get('message');
         @endif
     </div>
 
-    </div>
+
 </div>

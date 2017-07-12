@@ -2,7 +2,7 @@
     position:fixed;
     margin-bottom:0;
     height: 100px;
-    width:110%;
+    width:101%;
     z-index: 2;
     background-color: #980748;
     border-color: #e7e7e7;
@@ -43,7 +43,7 @@ ul.nav.navbar-nav li a{
     height: auto;
 }
 .menu-carta{
-    font-size:0px;
+    font-size:0.5em;
     font-family:arial;
     margin-right: -15px;
     text-align: center;
@@ -417,12 +417,15 @@ button.sbmt{
 .reserv ul{
     text-align:center;
 }
-#datos_user{
+#datos_user,#contacto_user{
     position:relative;
     top:300px;
-    height:700px;
+    height:620px;
 }
-#datos_user #datos-user,#datos_user #edit-user{
+#contacto_user{
+    top:140px;
+}
+#datos_user #datos-user,#datos_user #edit-user,#contacto_user #contacto-user{
     text-align:center;
 }
 #datos_user #edit-user input{
@@ -434,6 +437,19 @@ button.sbmt{
     text-align:center;
     color:inherit;
 }
-#datos_user .well{
-    border:0
+#datos_user .well,#contacto_user .well{
+    border:0;
 }
+#contacto_user textarea{
+    border: 1px solid inherit;
+    background-color: inherit;
+    padding:20px;
+ }
+#privacidad{
+    position:relative;
+    top:120px;
+    height:1000px;
+    line-height:1.8em;
+    font-family:Arial;
+}
+

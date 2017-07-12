@@ -25,7 +25,7 @@ function mostrar(e){
     var url=window.location.pathname.split("/");
 
     var id=$(this).attr('data');
-    if(url.length==4){
+    if(url[url.length-2]!="admin"){
         var tit = $(this).parent().parent().children('h2').html();
         var onlyimg = $(this).parent().parent().children('input').val();
         if(onlyimg==1) onlyimg="SI";

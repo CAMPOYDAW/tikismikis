@@ -13,35 +13,35 @@
 
                                     <div class="gkColumns" data-cols="4">
                                         <div>
-                                            <h3 style="color: #fff;">CURSOS</h3>
+                                            <h3 style="color: #fff;">OPINIONES</h3>
                                             <ul>
-                                                <li><a href="http://www.academiafajardo.com/cursos/todos-nuestros-cursos.html"><i class="fa fa-book fa-fw" style="color: #fff; font-size: 24px; vertical-align: -20%;"></i>FORMACIÓN<small>Tu formación, tu empleo</small></a></li>
-                                                <li><a href="http://www.academiafajardo.com/cursos/para-trabajadores.html"><i class="fa fa-refresh fa-fw" style="color: #fff; font-size: 24px; vertical-align: -20%;"></i>FORMACIÓN CONTINUA<small>Cursos para trabajadores</small></a></li>
-                                                <li><a href="http://www.academiafajardo.com/cursos/para-desempleados.html"><i class="fa fa-paperclip fa-fw" style="color: #fff; font-size: 24px; vertical-align: -20%;"></i>FORMACIÓN OCUPACIONAL<small>Cursos para desempleados</small></a></li>
+                                                <li><a href="{{ C_TRIP }}" target="_blank"><i class="fa fa-tripadvisor fa-fw" style="color: #fff; font-size: 24px; vertical-align: -20%;"></i>TRIPADVISOR<small>Opiniones de nuestro clientes</small></a></li>
+                                                <li><a href="{{ C_FOURSQUARE }}" target="_blank"><i class="fa fa-foursquare fa-fw" style="color: #fff; font-size: 24px; vertical-align: -20%;"></i>FOURSQUARE<small>Opiniones de nuestros clientes</small></a></li>
+
                                             </ul>
                                         </div>
                                         <div>
                                             <h3 style="color: #fff;">DIRECCIÓN</h3>
                                             <ul>
-                                                <li><a href="http://www.academiafajardo.com"><i class="fa fa-home fa-fw" style="color: #fff; font-size: 24px; vertical-align: -20%;"></i>Academia FAJARDO<small>www.academiafajardo.com</small></a></li>
-                                                <li><a href="https://www.google.es/maps/place/Academia+Fajardo/@38.481592,-0.7871425,15z/data=!4m2!3m1!1s0x0:0x8b4dc7b1bc230634?sa=X&amp;ved=0ahUKEwjdnMC5kqHPAhXEbxQKHRVMD44Q_BIIcjAN"><i class="fa fa-map-marker fa-fw" style="color: #fff; font-size: 24px; vertical-align: -20%;"></i>C/ Jaime Balmes, 68<small>03600 - Elda [Alicante]</small></a></li>
-                                                <li><a href="http://www.academiafajardo.com/contacto.html"><i class="fa fa-envelope fa-fw" style="color: #fff; font-size: 24px; vertical-align: -20%;"></i>EMAIL<small>info@academiafajardo.com</small></a></li>
+                                                <li><a href="{{ C_WEB }}"><i class="fa fa-home fa-fw" style="color: #fff; font-size: 24px; vertical-align: -20%;"></i>{{ C_EMPRESA }}<small>{{ substr(C_WEB,7) }}</small></a></li>
+                                                <li><a href="{{ C_MAPS }}" TARGET="_blank"><i class="fa fa-map-marker fa-fw" style="color: #fff; font-size: 24px; vertical-align: -20%;"></i>{{ C_DIRECCION }}<small>{{ C_CP }} - {{ C_POBLACION }} [{{ C_PROVINCIA }}]</small></a></li>
+                                                <li><a href="{{ url(Auth::user()?'/contacto':'/login-public') }}"><i class="fa fa-envelope fa-fw" style="color: #fff; font-size: 24px; vertical-align: -20%;"></i>EMAIL<small>{{ C_EMAIL }}</small></a></li>
                                             </ul>
                                         </div>
                                         <div>
                                             <h3 style="color: #fff;">CONTACTO</h3>
                                             <ul>
-                                                <li><a href="tel:965390301"><i class="fa fa-phone-square fa-fw" style="color: #fff; font-size: 24px; vertical-align: -20%;"></i><strong>965.39.03.01</strong><small>Teléfono fijo</small></a></li>
-                                                <li><a href="tel:691548941"><i class="fa fa-mobile fa-fw" style="color: #fff; font-size: 24px; vertical-align: -20%;"></i><strong>691.548.941</strong><small>Teléfono móvil</small></a></li>
-                                                <li><a href="https://www.facebook.com/academiafajardo/"><i class="fa fa-facebook-square fa-fw" style="color: #fff; font-size: 24px; vertical-align: -20%;"></i><strong>Academia Fajardo</strong><small>Facebook</small></a></li>
+                                                <li><a href="tel:{{ C_TFIJO }}"><i class="fa fa-phone-square fa-fw" style="color: #fff; font-size: 24px; vertical-align: -20%;"></i><strong>{{ C_TFIJO }}</strong><small>Teléfono fijo</small></a></li>
+                                                <li><a href="tel:{{ C_TMOVIL }}"><i class="fa fa-mobile fa-fw" style="color: #fff; font-size: 24px; vertical-align: -20%;"></i><strong>{{ C_TMOVIL }}</strong><small>Teléfono móvil</small></a></li>
+                                                <li><a href="{{ C_FACEBOOK }}" target="_blank"><i class="fa fa-facebook-square fa-fw" style="color: #fff; font-size: 24px; vertical-align: -20%;"></i><strong>{{ C_EMPRESA }}</strong><small>Facebook</small></a></li>
                                             </ul>
                                         </div>
                                         <div>
                                             <h3 style="color: #fff;">PRIVACIDAD</h3>
                                             <ul>
-                                                <li><a href="http://www.academiafajardo.com/index.php/politica-de-privacidad"><i class="fa fa-lock fa-fw" style="color: #fff; font-size: 24px; vertical-align: -20%;"></i>Privacidad<small>Protección de datos</small></a></li>
-                                                <li><a href="#"><i class="fa fa-code-fork fa-fw" style="color: #fff; font-size: 24px; vertical-align: -20%;"></i>Cookies<small>Política de navegación</small></a></li>
-                                                <li><a href="http://www.academiafajardo.com/mapa-del-sitio.html"><i class="fa fa-sitemap fa-fw" style="color: #fff; font-size: 24px; vertical-align: -20%;"></i>Mapa del sitio<small>Xmap</small></a></li>
+                                                <li><a href={{ url('/privacidad') }}><i class="fa fa-lock fa-fw" style="color: #fff; font-size: 24px; vertical-align: -20%;"></i>Privacidad<small>Protección de datos</small></a></li>
+                                                <li><a href="{{ url('/privacidad') }}"><i class="fa fa-code-fork fa-fw" style="color: #fff; font-size: 24px; vertical-align: -20%;"></i>Cookies<small>Política de navegación</small></a></li>
+                                                <li><a href="/sitemap.xml"><i class="fa fa-sitemap fa-fw" style="color: #fff; font-size: 24px; vertical-align: -20%;"></i>Mapa del sitio<small>Xmap</small></a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -64,24 +64,24 @@
 
                         <script>(function(){var js,fs,d=document,id="tars-widget-script",b="https://tars-file-upload.s3.amazonaws.com/share/";if(!d.getElementById(id)){js=d.createElement("script");js.id=id;js.type="text/javascript";js.src=b+"js/widget.js";fs=d.getElementsByTagName("script")[0];fs.parentNode.insertBefore(js,fs)}})();</script></div>
                 </div> <!-- end .et_pb_widget -->
-                <p class="footer-copy">© 2016 All rights reserved.</p>
+                <p class="footer-copy">© 2017 Antonio Campoy.</p>
             </div>
 
             <div class="col-xs-12 col-sm-4">
                 <ul class="et-social-icons">
 
                     <li class="et-social-icon et-social-facebook">
-                        <a href="https://www.facebook.com/webpararestaurantes/" class="icon">
+                        <a href="{{ C_FACEBOOK }}" class="icon" target="_blank">
                             <i class="fa fa-facebook-square fa-fw" style="color: #fff;font-size: 24px;vertical-align: -20%;" data-original-title="" title=""></i>
                         </a>
                     </li>
                     <li class="et-social-icon et-social-google-plus">
-                        <a href="https://plus.google.com/u/0/b/117624018339958384121/+Webpararestaurantes/posts" class="icon">
+                        <a href="{{ C_TWITTER }}" class="icon" target="_blank">
                             <i class="fa fa-twitter-square fa-fw" style="color: #fff;font-size: 24px;vertical-align: -20%;" data-original-title="" title=""></i>
                         </a>
                     </li>
                     <li class="et-social-icon et-social-rss">
-                        <a href="http://webpararestaurantes.com/feed/" class="icon">
+                        <a href="{{ C_LINKEDIN }}" class="icon" target="_blank">
                             <i class="fa fa-linkedin-square fa-fw" style="color: #fff;font-size: 24px;vertical-align: -20%;" data-original-title="" title=""></i>
                         </a>
                     </li>

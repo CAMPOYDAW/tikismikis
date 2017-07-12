@@ -14,13 +14,16 @@
 Route::get('/','FrontController@getIndex');
 Route::get('/back/index','BackController@getIndex');
 
-Route::get('/contacto','PrivateController@getContacto');
-Route::get('/datos','PrivateController@getDatos');
-Route::post('/datos','PrivateController@postDatos');
+
 Route::get('/carta','FrontController@getCarta');
 Route::get('/eventos','FrontController@getEventos');
+Route::get('/privacidad','FrontController@getPrivacidad');
+Route::get('/situacion','FrontController@getSituacion');
 
-
+Route::get('/contacto','PrivateController@getContacto');
+Route::post('/contacto','PrivateController@postContacto');
+Route::get('/datos','PrivateController@getDatos');
+Route::post('/datos','PrivateController@postDatos');
 Route::get('/reserva','PrivateController@getReserva');
 Route::put('reserva','PrivateController@putReserva');
 Route::get('datos','PrivateController@getDatos');
@@ -76,6 +79,13 @@ Route::post('admin/usuarios/borrar','BackUsuariosController@postBorrar');//AJAX
 Route::get('admin/reservas','BackReservasController@getReservas');
 Route::post('admin/reservas','BackReservasController@postReservas');
 Route::post('admin/reservas/anular','BackReservasController@postAnular');
+
+Route::get('admin/contacto','BackContactoController@getContacto');
+Route::post('admin/contacto','BackContactoController@postContacto');
+
+Route::post('admin/sets','BackController@postSets');
+
+
 
 
 

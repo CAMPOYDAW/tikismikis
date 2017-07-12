@@ -64,6 +64,7 @@ $cont=0;
                             <h3>{{ $menus[$cont]['fecha'] }}</h3>
                             <p> {{ $menus[$cont]['descripcion'] or '' }}</p>
                             <p>{!!   $platos_menu[$menus[$cont]['id']] !!}</p>
+							<input type="hidden" value="{{ $menus[$cont]['onlyImg'] }}">
                         </div>
                         @if($ult_div==2)
                         <?php $cont++ ?>
@@ -73,6 +74,7 @@ $cont=0;
                             <h3>{{ $menus[$cont]['fecha'] }}</h3>
                             <p> {{ $menus[$cont]['descripcion'] or '' }}</p>
                             <p>{!!   $platos_menu[$menus[$cont]['id']] !!}</p>
+							<input type="hidden" value="{{ $menus[$cont]['onlyImg'] }}">
                         </div>
                         @endif
                         </div>

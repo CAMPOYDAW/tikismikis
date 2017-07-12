@@ -8,7 +8,6 @@ body{
     color:rgb(187, 170, 187);
     font-family: 'Yellowtail';
     font-size:1.9em;
-    max-width:1700px;
     margin:auto;
     font-family:pictograph;
     font-family:-webkit-pictograph;
@@ -48,7 +47,7 @@ h1,h2{
     text-align: center;
 }
 h2{
-    font-size:2.5em;
+    font-size:2.3em;
 }
 /*
  * Base structure
@@ -112,7 +111,7 @@ h2{
     margin-left: -400px;
 }
 .site-wrapper-inner {
-    display: table-cell;
+
     vertical-align: top;
 }
 .cover-container {
@@ -134,7 +133,7 @@ ul.nav.navbar-nav li {
 .navbar-default{
     position:absolute;
     margin-bottom:0;
-    width:110%;
+    width:101%;
     background-color: rgba(231,231,231,.5);
     height:50px;
     z-index: 5;
@@ -206,7 +205,7 @@ ul.nav.navbar-nav li{
     width:100%;
 }
 #myCarousel{
-    height: 700px;
+    height: 500px;
 }
 #menus{
     position:relative;
@@ -233,7 +232,7 @@ ul.nav.navbar-nav li{
     color: white;
 }
 #menus h2 {
-    font-size:2em;
+    font-size:1.8em;
 }
 #menus .container h2{
     font-size:1.5em;
@@ -277,7 +276,7 @@ footer>div:before,#login:before{
     width:100%;
     height:100%;
     left:0;
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0,0,0,.8);
 }
 #login:before{
     background-color: rgba(0,0,0,.3);
@@ -337,7 +336,6 @@ ul,ol{
 }
 .et-social-icons li {
     display: inline-block;
-    margin-left: 20px;
     color:gray;
 }
 #gkBottom5 {
@@ -400,7 +398,6 @@ small{
 #carousel-menus .row>div{
     background-image: url('../img/footer.jpg');
     background-attachment: fixed;
-    background-position: 0 -120px;
     background-size: cover;
     height:492px;
 }
@@ -474,7 +471,15 @@ small{
     /* Internet Explorer 10 y superior */
     color:  white;
 }
-
+#login-oferta{
+    text-align: center;
+    position: relative;
+    padding: 15px;
+    bottom: -400px;
+}
+#login-oferta span{
+    padding:10px;
+}
 
 @media (max-width: 1500px){
     #menus .container{
@@ -503,6 +508,13 @@ small{
         color: rgb(187, 170, 187) !important;
         text-align: center;
     }
+	.footer-copy{
+		margin-top:20px;
+   		 margin-bottom: -20px;
+	}
+	.footer_main{
+		padding:0px;
+	}
 }
 @media (min-width: 620px) and (max-width: 767px){
     .cover-container {
@@ -538,4 +550,26 @@ small{
     .cover-container {
         width: 700px;
     }
+}
+@media  (max-width: 993px){
+	
+
+	.gkColumns > div {
+		width:50%;
+		padding-left:15%;
+	}
+	footer>div {
+		height:110%;
+
+	}
+}
+@media  (max-width: 665px){
+	.gkColumns > div {
+		width:100%;
+		padding-left:35%;
+	}
+	footer>div {
+		height:150%;
+
+	}
 }

@@ -8,25 +8,36 @@ use App\User;
 use Illuminate\Support\Facades\Validator;
 use App\Reserve;
 use Illuminate\Support\Facades\DB;
+use App\Contact;
+use App\Setting;
+
 class BackController extends Controller{
 
     protected $mensaje;
+    public $sets;
 
     public function __construct(){
         $this->middleware('auth');
         $this->middleware('is_admin');
+        $this->sets=Setting::all(['key','value']);
     }
 
 
     public function getIndex(){
         $n_reservas=Reserve::where("estado","=","-1")->count();
         $n_reservas_hoy=Reserve::where("estado","=","1")->where("fecha","=", DB::raw('curdate()'))->count();
-
+        $n_contact_sin=Contact::where("respuesta","=",null)->count();
         session()->put('res_sin',$n_reservas);
         session()->put('res_hoy',$n_reservas_hoy);
-        session()->put('total_res',$n_reservas+$n_reservas_hoy);
-
-        return view('back.index');
+        session()->put('con_sin',$n_contact_sin);
+        session()->put('total_res',$n_reservas+$n_reservas_hoy+$n_contact_sin);
+        return view('back.index')->with('sets',$this->sets);
+    }
+    public function postSets(Request $request){
+        $reg=Setting::where('key','=',$request->key)->first();
+        $reg->value=$request->value;
+        $reg->save();
+        return redirect()->back()->with('message', 'configuración modificada');
     }
     public function postUpdateUser(Request $request){
         $min='|min:6';

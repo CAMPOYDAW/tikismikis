@@ -21,7 +21,7 @@
 
         <div class="form-group">
             <div class="checkbox">
-                    Remember Me <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}>
+                    Remember Me <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }} style="margin-left:{{ Request::is('login')?'-100px':''}}">
             </div>
         </div>
 

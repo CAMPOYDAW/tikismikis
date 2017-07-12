@@ -1,3 +1,13 @@
+@if(!Request::is("privacidad") && !Request::is("situacion"))
+
+<?php
+foreach ($sets as $s){
+
+    define($s->key,$s->value);
+}
+
+?>
+@endif
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +29,7 @@
 
 
 
-    @if(!(Request::is('menus') or Request::is('login-public') or Request::is('situacion') or Request::is('/')))
+    @if(!(Request::is('menus') or Request::is('login-public') or Request::is('/')))
         <link href="{{	url('/css/style2.css').'?'.random_int(1000,9999)	}}" rel="stylesheet">
     @endif
 
@@ -74,9 +84,9 @@
     <link rel="stylesheet" href="{{url('/assets/bootstrap/css/slider.css')}}" type="text/css">
     <script src="{{url('/assets/bootstrap/js/slider.js')}}"></script>
 @endif
-@if(Request::is('menus') or Request::is('login-public') or Request::is('situacion') or Request::is('/'))
+@if(Request::is('menus') or Request::is('login-public') or Request::is('/'))
     <script src="{{	url('/js/frontjs.js').'?'.random_int(1000,9999)	}}"></script>
-    <script src="{{	url('/js/comunjs.js').'?'.random_int(1000,9999)	}}"></script>
+    <script src="{{	url('/js/comunjs.js')	}}"></script>
 @else
     <script src="{{	url('/js/frontjs2.js')	}}"></script>
 @endif

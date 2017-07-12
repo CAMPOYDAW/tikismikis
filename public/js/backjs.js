@@ -117,6 +117,16 @@ $(document).ready(function () {
         mostrarImagen(this);
     });
     $('#categorias').multiSelect();
+    $(".pregunta").click(pregunta);
+
+    $(".v-previa").hover(function(){
+
+        var id=$(this).children('a').attr('data-id');
+        $("#pop-"+id).show();
+    },function(){
+        var id=$(this).children('a').attr('data-id');
+        $("#pop-"+id).hide();
+    });
 
 });
 $.extend($.expr[":"], {
@@ -197,6 +207,8 @@ function desactivar(el,id){
     }).fail(function(data){
         alert(data);
     });
+
+
 
 
 }
@@ -287,6 +299,17 @@ function edit_user(){
         $("#edit-user").hide();
     }
 }
+
+function edit_sets(set){
+    if(document.getElementById("edit-"+set).style.display=="none"){
+        $("#ver-"+set).hide();
+        $("#edit-"+set).show();
+    }else{
+        $("#ver-"+set).show();
+        $("#edit-"+set).hide();
+    }
+}
+
 function validar(){
    if($('#categorias').val()) return true;
     $("#f_error span").html(" Debes de elegir por lo menos una categoría");
@@ -294,6 +317,15 @@ function validar(){
     return false
 }
 
+function pregunta(){
+   var pr=$(this).attr('data-pregunta');
+   var id=$(this).attr('data-id');
+   $('#id').val(id);
+   $('#row-submit').show();
+   $('#admin-contacto .jumbotron').remove('class').prop('class','well pregunta');
+   $(this).remove('class').prop('class','jumbotron');
+   $('#pregunta').html(pr);
+}
 
 
 function NumCheck(e, field) {
